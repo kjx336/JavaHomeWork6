@@ -7,6 +7,7 @@ package homework6;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 /**
  *
@@ -39,19 +40,13 @@ class Echoing{
     }
 }
 public class Echo {
-    public static void main(String[] args) {
-        //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        Scanner scan = new Scanner(System.in);
-        //try{
-            if (scan.hasNext()) {
-                String s = scan.nextLine();
-                System.out.println(s);
-            }
-            //String str = bufferedReader.readLine();
-            //Echoing ECHO = new Echoing(s);
-        //}catch(IOException e){
-        //    e.printStackTrace();
-        //}
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in,"GB2312"));
+        try{
+            String str = bufferedReader.readLine();
+            Echoing ECHO = new Echoing(str);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
     }
-    
 }

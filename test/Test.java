@@ -16,42 +16,16 @@
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
-
 /**
  *
  * @author kjx33
  */
-public class PhoneBookTest {
-    
-    public PhoneBookTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
+public class Test {
 
-
-     @Test
-    public void begin(){
-        System.out.println("--------------------------");
+    public static void main(String[] args) {
+        System.out.println("使用数组");
+        PhoneBook[] myPhonebook=new PhoneBook[2];
+        /*&System.out.println("--------------------------");
         PhoneBook b1 = PhoneBook.readPhoneBook();
         System.out.println("--------------------------");
         PhoneBook b2 = PhoneBook.readPhoneBook();
@@ -59,6 +33,14 @@ public class PhoneBookTest {
         System.out.println(b1);
         System.out.println("--------------------------");
         System.out.println(b2);
-        System.out.println("--------------------------");
+        System.out.println("--------------------------");*/
+        for(int i=0;i<2;i++){
+            myPhonebook[i] = PhoneBook.readPhoneBook();
+        }
+        for(int i=0;i<2;i++){
+            System.out.println(myPhonebook[i]);
+        }
+        
     }
+    
 }
